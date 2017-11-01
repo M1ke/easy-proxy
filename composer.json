@@ -1,0 +1,14 @@
+{
+    "name": "m1ke/easy-proxy",
+    "type": "project",
+    "require": {
+        "symfony/http-foundation": "^3.3",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "authors": [
+        {
+            "name": "m1ke",
+            "email": "git@m1ke.me"
+        }
+    ]
+}
