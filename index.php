@@ -100,6 +100,7 @@ function process_request(Request $inbound_request){
 		log_to_file("Options will be");
 		log_to_file(print_r($options, true));
 	}
+	$options['http_errors'] = false;
 
 	$method = $inbound_request->getMethod();
 
