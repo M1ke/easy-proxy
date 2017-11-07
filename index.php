@@ -23,7 +23,7 @@ function log_to_file($line){
  * @param Request $inbound_request
  * @return Response
  */
-function exec(Request $inbound_request){
+function process_request(Request $inbound_request){
 
 	$uri = $inbound_request->getRequestUri();
 
@@ -114,7 +114,7 @@ function exec(Request $inbound_request){
 log_to_file('Received a request to proxy');
 
 $inbound_request = Request::createFromGlobals();
-$response = exec($inbound_request);
+$response = process_request($inbound_request);
 $response->prepare($inbound_request);
 $response->send();
 
